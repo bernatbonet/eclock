@@ -60,7 +60,7 @@ class Persona(models.Model):
 	cifeuropeo = models.CharField(max_length=15, verbose_name=_(u'Cif/Dni Europeo'), help_text=_(u'Introduzca el cif/dni europeo'), null=True, blank=True)
 	nom = models.CharField(max_length=100, verbose_name=_(u'Nombre'), help_text=_(u'Introduzca el nombre'))
 	codvia =  models.ForeignKey(Via, verbose_name=_(u'Vía'), help_text=_(u'Introduzca la vía'), null=True, blank=True)
-	via = models.CharField(max_length=35, verbose_name=_(u'Vía'), help_text=_(u'Introduzca la vía'), unique=True)
+	via = models.CharField(max_length=35, verbose_name=_(u'Vía'), help_text=_(u'Introduzca la vía'))
 	calle = models.CharField(max_length=100, verbose_name=_(u'Nombre Vía'), help_text=_(u'Introduzca el nombre de la vía'))
 	numero1 = models.CharField(max_length=5, verbose_name=_(u'Número'), help_text=_(u'Introduzca el número'))
 	numero2 = models.CharField(max_length=5, verbose_name=_(u'Número 2'), help_text=_(u'Introduzca el número 2'), null=True, blank=True)
