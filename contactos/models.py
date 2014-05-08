@@ -4,6 +4,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from ubicaciones.models import Via, Pais, Provincia, Municipio
 
+# OJO: unique_together = ('field1','field2')
+
 # Create your models here.
 class Meta:
 	verbose_name = _(u'Contacto')
