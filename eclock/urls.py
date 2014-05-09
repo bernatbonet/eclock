@@ -2,6 +2,7 @@
 from django.conf.urls import include, patterns, url
 from rest_framework import routers
 
+from ubicaciones import urls as urls_ubicaciones
 from ubicaciones.views import ViaViewSet, PaisViewSet, AutonomiaViewSet, ProvinciaViewSet, MunicipioViewSet, hello_world
 from contactos.views import CnaeViewSet, SujetoViewSet, SectorViewSet, SituacionProcesalViewSet, PersonaViewSet
 
@@ -21,6 +22,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	url(r'^prueba/', include(urls_ubicaciones)),
     url(r'^', include(router.urls)),
     url(r'^hello/', hello_world),
 	url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
